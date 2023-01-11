@@ -20,14 +20,29 @@ int main()
 	int V = 0;
 	std::cin >> A >> B >> V;
 
-	Solution(A, B, V);
+	std::cout << Solution(A, B, V);
 
 	return 0;
 }
 
 int Solution(int _A, int _B, int _V)
 {
+	int i_Ans = 0;
 	
+	if ((_V - _A) % (_A - _B) == 0)
+	{
+		i_Ans = (_V - _A) / (_A - _B) + 1;
+	}
+	else if(_V - _A == 0)
+	{
+		i_Ans = 1;
+	}
+	else
+	{
+		i_Ans = (_V - _A) / (_A - _B) + 2;
+	}
+
+	return i_Ans;
 }
 
 //*/
