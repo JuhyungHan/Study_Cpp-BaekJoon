@@ -40,38 +40,42 @@ XX 는 엘리베이터에서부터 세었을 때의 번호를 나타낸다.
 //*
 #include <iostream>
 
-int Solution(int _A, int _B, int _V);
+void Solution(int _H, int _W, int _N);
 
 int main()
 {
-	int A = 0;
-	int B = 0;
-	int V = 0;
-	std::cin >> A >> B >> V;
+	int T = 0;
+	
+	std::cin >> T;
 
-	std::cout << Solution(A, B, V);
+	int H = 0;
+	int W = 0;
+	int N = 0;
 
+	for (int i = 0; i < T; ++i)
+	{
+		std::cin >> H >> W >> N;
+
+		Solution(H, W, N);
+	}
+	
 	return 0;
 }
 
-int Solution(int _A, int _B, int _V)
+void Solution(int _H, int _W, int _N)
 {
 	int i_Ans = 0;
 
-	if ((_V - _A) % (_A - _B) == 0)
+	if (_N % _H == 0)
 	{
-		i_Ans = (_V - _A) / (_A - _B) + 1;
-	}
-	else if (_V - _A == 0)
-	{
-		i_Ans = 1;
+		i_Ans = _H * 100 + (_N / _H);
 	}
 	else
 	{
-		i_Ans = (_V - _A) / (_A - _B) + 2;
+		i_Ans = (_N % _H) * 100 + (_N / _H) + 1;
 	}
 
-	return i_Ans;
+	std::cout << i_Ans << '\n';
 }
 
 //*/
