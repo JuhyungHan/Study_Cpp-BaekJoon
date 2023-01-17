@@ -30,5 +30,8 @@
     <ClCompile Include="00_Ex6.cpp">
       <Filter>00. Basic_Math1</Filter>
     </ClCompile>
+    <ClCompile Include="00_Ex7.cpp">
+      <Filter>00. Basic_Math1</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
