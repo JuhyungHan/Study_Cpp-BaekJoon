@@ -33,5 +33,11 @@
     <ClCompile Include="00_Ex7.cpp">
       <Filter>00. Basic_Math1</Filter>
     </ClCompile>
+    <ClCompile Include="00_Ex8.cpp">
+      <Filter>00. Basic_Math1</Filter>
+    </ClCompile>
+    <ClCompile Include="01_Ex1.cpp">
+      <Filter>01. Basic_Math2</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
